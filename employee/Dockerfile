@@ -1,21 +1,21 @@
-# Use official OpenJDK image
+# Use OpenJDK 17 base image
 FROM openjdk:17-jdk-slim
 
-# Set working directory
+# Set working directory inside container
 WORKDIR /app
 
-# Copy pom.xml and download dependencies
+# Copy pom.xml and source code
 COPY pom.xml .
-RUN mvn dependency:go-offline -B
-
-# Copy source code
 COPY src ./src
 
-# Package the application
-RUN mvn package -DskipTests
+# Install Maven
+RUN apt-get update && apt-get install -y maven
 
-# Expose port 8080
-EXPOSE 8080
+# Download dependencies
+RUN mvn dependency:go-offline -B
 
-# Run the jar file
-CMD ["java", "-jar", "target/*.jar"]
+# Build the project (skip tests)
+RUN mvn clean package -DskipTests
+
+# Run the generated jar file
+CMD ["java", "-jar", "target/employee-0.0.1-SNAPSHOT.jar"]
