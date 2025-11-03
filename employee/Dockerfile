@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Step 1: Build karne ke liye Maven image use karo
 FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
@@ -40,4 +40,4 @@ RUN mvn clean package -DskipTests
 
 # Run the generated jar file
 CMD ["java", "-jar", "target/employee-0.0.1-SNAPSHOT.jar"]
->>>>>>> 6fb48a0297cb54ecdef823e9324a1ddadbc3636e
+
