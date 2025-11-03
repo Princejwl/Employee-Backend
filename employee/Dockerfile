@@ -18,7 +18,7 @@ COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
-=======
+
 # Use OpenJDK 17 base image
 FROM openjdk:17-jdk-slim
 
