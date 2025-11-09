@@ -20,7 +20,8 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
 # Use OpenJDK 17 base image
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
+
 
 # Set working directory inside container
 WORKDIR /app
