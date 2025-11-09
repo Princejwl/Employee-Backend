@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @CrossOrigin(origins = {
         "https://employee-frontend-rj1xf6o8r-princes-projects-27e0de7f.vercel.app/",
-
+        "https://employee-frontend-8pq4v219l-princes-projects-27e0de7f.vercel.app/",
         "https://employee-frontend-mgc6ddvax-princes-projects-27e0de7f.vercel.app",
         "http://localhost:3000"
 }) // ✅ CORS fix deployed on Render
