@@ -14,7 +14,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "https://employee-frontend-flame.vercel.app/") // Allow requests from React app
+@CrossOrigin(origins = {
+        "https://employee-frontend-flame.vercel.app",
+        "https://employee-frontend-cemm9z9s0-princes-projects-27e0de7f.vercel.app",
+        "http://localhost:3000"
+}) // ✅ CORS fix deployed on Render
 public class EmployeeController {
 
     private final EmployeeService employeeService;
