@@ -13,6 +13,7 @@ import java.util.List;
 @RequestMapping("/api")
 @RequiredArgsConstructor
 @CrossOrigin(origins = {
+        "https://employee-frontend-flame.vercel.app/",
         "https://employee-frontend-rj1xf6o8r-princes-projects-27e0de7f.vercel.app/",
         "https://employee-frontend-8pq4v219l-princes-projects-27e0de7f.vercel.app/",
         "https://employee-frontend-mgc6ddvax-princes-projects-27e0de7f.vercel.app",
