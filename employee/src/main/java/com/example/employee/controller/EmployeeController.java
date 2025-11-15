@@ -82,7 +82,7 @@ public class EmployeeController {
     }
 
     // ✅ Health check (Render testing)
-    @GetMapping("/health")
+    @GetMapping("/")
     public String health() {
         return "OK";
     }
